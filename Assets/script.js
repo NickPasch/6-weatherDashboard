@@ -51,7 +51,7 @@ var infor = $("#infor")
 
 function ret(){
     let cityName = $("#city").val() 
-    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APIKey}`
+    var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APIKey}`
 
     $.ajax({
         url: queryURL,
@@ -107,7 +107,7 @@ function ret(){
             var iconcode5 = data.list[33].weather[0].icon
             var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png"
             ic5.attr('src', iconurl5)
-            var theQuery = `http://api.openweathermap.org/data/2.5/uvi/forecast?lat=${data.city.coord.lat}&lon=${data.city.coord.lon}&appid=${APIKey}`
+            var theQuery = `https://api.openweathermap.org/data/2.5/uvi/forecast?lat=${data.city.coord.lat}&lon=${data.city.coord.lon}&appid=${APIKey}`
             console.log(data.list[5].weather[0].icon)
             $.ajax({
                 url: theQuery,
@@ -135,7 +135,7 @@ function ret(){
     $(p0).on('click', function(){
         let cityName = p0.text()
         console.log('click')
-        var queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APIKey}`
+        var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APIKey}`
 
         $.ajax({
             url: queryURL,
@@ -191,7 +191,7 @@ function ret(){
                 var iconcode5 = data.list[33].weather[0].icon
                 var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png"
                 ic5.attr('src', iconurl5)
-                var theQuery = `http://api.openweathermap.org/data/2.5/uvi/forecast?lat=${data.city.coord.lat}&lon=${data.city.coord.lon}&appid=${APIKey}`
+                var theQuery = `https://api.openweathermap.org/data/2.5/uvi/forecast?lat=${data.city.coord.lat}&lon=${data.city.coord.lon}&appid=${APIKey}`
                 console.log(data.list[5].weather[0].icon)
                 $.ajax({
                     url: theQuery,
